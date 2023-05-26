@@ -1,0 +1,276 @@
+@font-face {
+	font-family: "practice";
+	src: url("fonts/Practice-font.otf");
+  }
+  html{
+    scroll-behavior: smooth;
+  }
+* {
+    margin: 0;
+    padding: 0;
+}
+#app{
+    position: relative;
+}
+.wrapper {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
+}
+.fon {
+    width: 100%;
+    /* position: ; */
+    top: 0;
+    z-index: 0;
+}
+.bur{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    z-index: 4;
+}
+.hole{
+    position: absolute;
+    top: 97vh;
+     left: 50%;
+     transform: translateX(-50%);
+}
+.hole_container{
+    position: relative;
+     
+
+}
+.hole_sides{
+    width: 266px;
+    height: calc(var(--scroll) - 530px);
+    background: #54321D;
+    will-change: height;
+}
+.hole_center{
+    width: 124px;
+    height: calc(var(--scroll) - 530px);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    background: #744224;
+    transform: translateX(-50%);
+    will-change: height;
+}
+span {
+    font-size: 50px;
+    color: #EAEAEA;
+    font-family: "practice";
+}
+.black_text {
+    font-size: 50px;
+    color: #292929;
+    font-family: "practice";
+}
+.form_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.kind {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+}
+.kind_text {
+    width: 500px;
+    text-align: center;
+}
+
+.water_bg_container{
+    position: absolute;
+    bottom: 0;
+    z-index: 9;
+}
+.water_bg_container img{
+    height: 2155px;
+    width: 100%;
+}
+#guar_size, #forma_size{
+    position: relative;
+    z-index: 10;
+}
+.guar_text {
+    width: 700px;
+    text-align: center;
+}
+h1 {
+    font-size: 50px;
+    color: #EAEAEA;
+    font-family: "practice";
+    margin-bottom: 70px; 
+}
+.forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.position {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input {
+    margin: 10px;
+}
+.form_name {
+    width: 574px;
+    height: 89px;
+    border: #292929 4px solid;
+    background: rgba(0, 0, 0, 0);
+    font-size: 50px;
+    font-family: "practice";
+    text-align: center;
+}
+
+.form_submit {
+    width: 390px;
+    height: 89px;
+    background-color: #292929;
+    color: #EAEAEA;
+    font-size: 50px;
+    font-family: 'practice';
+    border: none;
+    margin-top: 30px;
+    outline: none;
+}
+.form_name:focus {
+    outline: none;
+}
+.form_name::placeholder {
+    color: #2929296b;
+}
+#home_size{
+    height: 900px;
+}
+#kind_aize{
+    height: 1080px;
+}
+#term_size{
+    height: 500px;
+}
+#advice_size{
+    height: 1350px;
+}
+#form_size {
+    height: 1080px;
+}
+.tel {
+    display: none;
+}
+
+/* АДАПТАЦИЯ */
+ @media screen and (max-width: 420px) {
+    .wrapper {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        
+    }
+    .comp {
+        display: none;
+    }
+    .tel {
+        display: block;
+        font-size: 25px;
+        margin-bottom: 30px;
+    }
+    .fon {
+        width: 420px;
+        height: 2000px;
+    }
+    .water_bg {
+        display: none; 
+    }
+    .hole, .bur{
+        display: none;
+    }
+    .logo {
+        width: 350px;
+    }
+    span {
+        font-size: 20px;
+    }
+    .black_text {
+        font-size: 20px;
+    }
+    .kind_text {
+        width: 350px;
+    }
+    .guar_text {
+        width: 350px;
+        margin-bottom: 20px;
+    }
+    .form_text {
+        margin-bottom: 15px;
+    }
+    .form_name {
+        width: 250px;
+        height: 35px;
+        font-size: 20px;
+    }
+    .form_submit {
+        width: 250px;
+        height: 50px;
+        font-size: 20px;
+        margin-top: 10px;
+    }
+    input {
+        margin: 5px;
+    }
+    .kind {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 48vh;
+    }
+
+    .wrapper {
+        position: absolute;
+        z-index: 15;
+        top: 0;
+        width: 420px;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    #home_size{
+        height: 40vh;
+    }
+    #kind_aize{
+        height: 100%;
+    }
+    #term_size{
+        height: 25vh;
+    }
+    #advice_size{
+        height: 50vh;
+    }
+    #form_size {
+        height: 100%;
+    }
+ }
